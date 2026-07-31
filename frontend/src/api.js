@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // This reads from .env file — create frontend/.env with:
 // VITE_API_URL=http://localhost:5000
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://kartik-bhandare-vitto.onrender.com';
 
 // Create a pre-configured axios instance
 const api = axios.create({
