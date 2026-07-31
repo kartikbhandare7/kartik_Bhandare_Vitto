@@ -1,19 +1,31 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize({
-  host: process.env.PG_HOST || 'localhost',
-  port: parseInt(process.env.PG_PORT) || 5432,
-  database: process.env.PG_DB || 'msme_lending',
-  username: process.env.PG_USER || 'postgres',
-  password: process.env.PG_PASSWORD || 'postgres',
-  dialect: 'postgres',
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
   logging: false,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 const connectPostgres = async () => {
-  await sequelize.authenticate();
-  await sequelize.sync({ alter: true });
-  console.log('✅ PostgreSQL connected');
+  try {
+    await sequelize.authenticate();
+    console.log("✅ PostgreSQL connected");
+
+    await sequelize.sync({ alter: true });
+    console.log("✅ Database synchronized");
+  } catch (error) {
+    console.error("❌ PostgreSQL connection failed:");
+    console.error(error);
+    process.exit(1);
+  }
 };
 
-module.exports = { sequelize, connectPostgres };
+module.exports = {
+  sequelize,
+  connectPostgres,
+};
