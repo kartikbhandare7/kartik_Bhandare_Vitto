@@ -916,13 +916,12 @@ Currently no UI to see past applications. Would add:
 
 ## Author
 
-**[Your Name]**
+Kartik Bhandare
 B.Tech CSE 2026 — Ajeenkya DY Patil University, Pune
 Java Full Stack Developer
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- Email: your.email@gmail.com
+- GitHub: kartikbhandare7(https://github.com/your-username)
+- Email: kartikbhandare57@gmail.com
 
 ---
 
