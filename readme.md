@@ -920,7 +920,7 @@ Kartik Bhandare
 B.Tech CSE 2026 — Ajeenkya DY Patil University, Pune
 Java Full Stack Developer
 
-- GitHub: kartikbhandare7(https://github.com/your-username)
+- GitHub: kartikbhandare7(https://github.com/kartikbhandare7)
 - Email: kartikbhandare57@gmail.com
 
 ---
